@@ -5,6 +5,19 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Julia`,
+    description: `a web developer`,
+  },
+  plugins: [
+    `gatsby-plugin-styled-jsx`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Orbitron"],
+        },
+      },
+    },
+  ],
 }

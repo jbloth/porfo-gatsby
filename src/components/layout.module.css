@@ -1,0 +1,46 @@
+@value colors: "../styles/colors.css";
+@value bg, textblue from colors;
+
+/* ---- reset and base styles ---- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* This defines what 1rem is */
+  font-size: 62.5%; /*1 rem = 10px; 10px/16px = 62.5% */
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+
+  background-color: bg;
+  color: textblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+}
+
+/* ---- wrapper & utility classes ---- */
+:global(.section) {
+  width: 100%;
+}

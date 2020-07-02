@@ -1,0 +1,12 @@
+@value fontAnimations from "../../static/fonts/fonts.css";
+
+.container {
+  clip-path: inset(0 30% 0 0);
+}
+
+.text {
+  font-family: fontAnimations;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  color: #251684;
+}

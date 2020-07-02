@@ -1,0 +1,67 @@
+@value small, medium, large from "../styles/breakpoints.css";
+@value colors: "../styles/colors.css";
+@value bgOrange, lightyellow from colors;
+
+.hero {
+  /*position: relative;*/
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bgOrange;
+}
+
+.placeholderTextContainer {
+  width: 100%;
+  padding: 2rem 8rem;
+}
+
+.placeholderText {
+  /* width: 60%;
+          margin-left: -40%;
+          padding: 8rem;
+          margin-top: 10rem;*/
+  text-align: justify;
+}
+
+.myNameWrap {
+  margin-top: 5rem;
+  width: 40%;
+}
+
+.about {
+  background-color: lightyellow;
+}
+
+.imAWrap {
+  width: 100%;
+}
+
+.heresAWrap {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rect {
+  margin: 3rem;
+  background-color: skyblue;
+  height: 400px;
+}
+
+@media medium {
+  .myNameWrap {
+    top: -10px;
+    left: -20px;
+  }
+}
+
+@media small {
+  .myNameWrap {
+    width: 100%;
+    top: -10px;
+    left: -20px;
+  }
+}
