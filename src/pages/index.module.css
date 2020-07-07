@@ -1,9 +1,27 @@
 @value small, medium, large from "../styles/breakpoints.css";
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow from colors;
+@value bgOrange, lightyellow, textblue from colors;
 
+/* ---- general ---- */
+.textContainer {
+  width: 100%;
+  padding: 2rem 8rem;
+}
+
+.paragraph {
+  text-align: justify;
+}
+
+.flexRow {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+/* ---- hero section ---- */
 .hero {
-  /*position: relative;*/
   display: flex;
   width: 100vw;
   flex-direction: column;
@@ -12,43 +30,9 @@
   background-color: bgOrange;
 }
 
-.placeholderTextContainer {
-  width: 100%;
-  padding: 2rem 8rem;
-}
-
-.placeholderText {
-  /* width: 60%;
-          margin-left: -40%;
-          padding: 8rem;
-          margin-top: 10rem;*/
-  text-align: justify;
-}
-
 .myNameWrap {
   margin-top: 5rem;
   width: 40%;
-}
-
-.about {
-  background-color: lightyellow;
-}
-
-.imAWrap {
-  width: 100%;
-}
-
-.heresAWrap {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rect {
-  margin: 3rem;
-  background-color: skyblue;
-  height: 400px;
 }
 
 @media medium {
@@ -64,4 +48,72 @@
     top: -10px;
     left: -20px;
   }
+}
+
+/* ---- about section ---- */
+.about {
+  background-color: lightyellow;
+}
+
+.imAWrap {
+  width: 100%;
+}
+
+/* ---- projects section ---- */
+.projects {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  background-color: bgOrange;
+}
+
+.heresAWrap {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.projectImgContainer {
+  width: 40%;
+  /* background-color: textblue; */
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 5px;
+  /* position: relative; */
+}
+
+.projectImg {
+  width: 80%;
+  /* border-radius: 5px;
+  border: 6px solid textblue;
+   position: absolute;
+  top: 3rem;
+  left: 3rem; */
+}
+
+.projectInfo {
+  padding: 2rem 4rem;
+  width: 60%;
+}
+
+/* ---- education section ---- */
+.education {
+  background-color: lightyellow;
+}
+
+/* ---- contact section ---- */
+.contact {
+  background-color: bgOrange;
+}
+
+.goodNowWrap {
+  width: 50%;
+  padding: 2rem;
+}
+
+.contactFormWrap {
+  width: 50%;
+  padding: 12rem 4rem 2rem 4rem;
 }

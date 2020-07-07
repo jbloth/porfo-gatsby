@@ -4,7 +4,7 @@ import styles from "./WanderingText.module.css";
 const WanderingText = ({ text }) => {
   const refWanderText = useRef(); // container dom node
   const refWanderTextPath = useRef(); // textpath dom node
-  const initialStartOffset = 60; // initial text offset for text path
+  const initialStartOffset = -30; // initial text offset for text path
 
   // Set scroll listener TODO: better use useLayoutEffect?
   useEffect(() => {
@@ -31,7 +31,7 @@ const WanderingText = ({ text }) => {
 
       if (topY >= 0 - height && topY <= windowHeight) {
         const offset =
-          initialStartOffset -
+          initialStartOffset +
           Math.floor(
             ((windowHeight + height - bottomY) / (windowHeight + height)) * 100
           );
@@ -53,19 +53,14 @@ const WanderingText = ({ text }) => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 1440 389"
+        viewBox="0 0 1440 160"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           id="path-for-text-ima"
-          d="M-56.569 71.5553C156.431 52.0555 268.005 47.3628 411.431 71.5553C701.931 120.556 805.931 223.38 1045.93 292.055C1211.93 339.556 1451.93 354.556 1585.43 292.055"
+          d="M-52 103.217C110.5 64 252 55 408.5 55C697.5 55 834.361 108.919 1060.5 131C1209 145.5 1379.5 155.937 1513 103.217"
         />
-        {/* <path
-          d="M-56.569 71.5553C156.431 52.0555 268.005 47.3628 411.431 71.5553C701.931 120.556 805.931 223.38 1045.93 292.055C1211.93 339.556 1451.93 354.556 1585.43 292.055"
-          stroke="black"
-          strokeWidth="110"
-        /> */}
 
         <text className={styles.pathText}>
           <textPath

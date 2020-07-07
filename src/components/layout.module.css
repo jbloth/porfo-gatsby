@@ -1,3 +1,4 @@
+@value fontAnimations, fontText from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
 @value bg, textblue from colors;
 
@@ -21,6 +22,7 @@ body {
   overflow-x: hidden;
   position: relative;
 
+  font-family: fontText;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -40,7 +42,9 @@ ul {
 h1 {
 }
 
-/* ---- wrapper & utility classes ---- */
-:global(.section) {
+section {
   width: 100%;
+  padding: 4rem 0;
 }
+
+/* ---- wrapper & utility classes ---- */

@@ -1,0 +1,13 @@
+@value colors: "../styles/colors.css";
+@value textblue from colors;
+@value fontAnimations from "../../static/fonts/fonts.css";
+
+.container {
+  width: 100%;
+}
+
+.text {
+  font-family: fontAnimations;
+  font-size: 96px;
+  fill: textblue;
+}

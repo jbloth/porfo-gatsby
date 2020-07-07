@@ -36,8 +36,8 @@ const ShapeWithPathText = ({ text }) => {
             ((windowHeight + height - bottomY) / (windowHeight + height)) * 100
           );
         refShapeWithTextPath.current.setAttribute("startOffset", `${offset}%`);
-        console.log("bottomY: " + bottomY);
-        console.log("offset: " + offset);
+        // console.log("bottomY: " + bottomY);
+        // console.log("offset: " + offset);
       }
     };
 
@@ -69,7 +69,7 @@ const ShapeWithPathText = ({ text }) => {
           d="M233.159 553.413C140.179 488.67 -6.17167 489.153 100.219 335.761C153.993 258.231 126.493 229.15 274.648 135.187C422.803 41.2234 520.827 133.738 628.833 241.744C731.477 344.388 616.155 494.218 534.648 553.413C425.053 633.007 276.112 583.321 233.159 553.413Z"
         />
 
-        <text className={styles.pathText}>
+        <text className={styles.pathText} dy="-10">
           <textPath
             ref={refShapeWithTextPath}
             id="text-path"

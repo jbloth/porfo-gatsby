@@ -1,8 +1,14 @@
+@value colors: "../styles/colors.css";
+@value textblue from colors;
 @value fontAnimations from "../../static/fonts/fonts.css";
+
+.container {
+  width: 100%;
+}
 
 .pathText {
   font-family: fontAnimations;
   font-size: 5rem;
   letter-spacing: 2rem;
-  fill: #251684;
+  fill: textblue;
 }

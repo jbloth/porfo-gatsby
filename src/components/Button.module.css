@@ -1,0 +1,31 @@
+@value small, medium, large from "../styles/breakpoints.css";
+@value colors: "../styles/colors.css";
+@value bgOrange, lightyellow, textblue from colors;
+@value fontAnimations, fontText from "../../static/fonts/fonts.css";
+
+.btn {
+  font-family: fontText;
+  font-size: 1.4rem;
+  height: 3rem;
+  background-color: textblue;
+  color: lightyellow;
+  border: 2px solid transparent;
+  width: auto;
+  white-space: nowrap;
+
+  text-align: center;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: lightyellow;
+  color: textblue;
+  border: 2px solid textblue;
+}
+
+.btn__big {
+  font-size: 1.8rem;
+  height: 4rem;
+  width: 100%;
+}
