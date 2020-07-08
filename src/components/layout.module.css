@@ -1,6 +1,6 @@
 @value fontAnimations, fontText from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bg, textblue from colors;
+@value lightyellow, lightblue, textblue, linkFocus from colors;
 
 /* ---- reset and base styles ---- */
 *,
@@ -27,24 +27,54 @@ body {
   font-size: 16px;
   line-height: 1.7;
 
-  background-color: bg;
+  background-color: lightyellow;
   color: textblue;
+}
+
+h1 {
+  font-family: fontAnimations;
+  font-size: 6rem;
+  margin: 2rem 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h3,
+h4 {
+  margin-top: 1rem;
 }
 
 a {
   text-decoration: none;
+  color: textblue;
+}
+
+a:hover {
+  color: linkFocus;
 }
 
 ul {
   list-style: none;
 }
 
-h1 {
+button {
+  border: none;
 }
 
 section {
   width: 100%;
   padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ---- wrapper & utility classes ---- */
+:global(.textContainer) {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 8rem;
+}

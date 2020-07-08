@@ -1,12 +1,16 @@
 import React from "react";
-import "./layout.module.css";
+import "./Layout.module.css";
 import Header from "./Header";
+import Footer from "./Footer";
+import ScrollToTopBtn from "./ScrollToTopBtn";
 
 const Layout = ({ children }) => {
   return (
     <div>
       <Header />
       {children}
+      <ScrollToTopBtn />
+      <Footer />
     </div>
   );
 };

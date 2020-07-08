@@ -1,0 +1,27 @@
+@value colors: "../styles/colors.css";
+@value lightyellow, lightblue, textblue, linkFocus from colors;
+
+.scrollTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: textblue;
+  z-index: 93;
+  cursor: pointer;
+  width: 3rem;
+  height: 4.5rem;
+  border-radius: 3px;
+  display: none;
+}
+
+.scrollTopBtn__active {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  width: 4rem;
+  height: 4rem;
+  /*padding: 0.4rem;*/
+  fill: lightyellow;
+}

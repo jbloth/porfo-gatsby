@@ -1,8 +1,27 @@
 @value fontAnimations from "../../static/fonts/fonts.css";
+@value smallest, small, medium, large from "../styles/breakpoints.css";
 
 .pathText {
   font-family: fontAnimations;
-  font-size: 5rem;
+  font-size: 6rem;
   letter-spacing: 2rem;
   fill: #251684;
+}
+
+@media medium {
+  .pathText {
+    font-size: 8rem;
+  }
+}
+
+@media small {
+  .pathText {
+    font-size: 10rem;
+  }
+}
+
+@media smallest {
+  .pathText {
+    font-size: 12rem;
+  }
 }

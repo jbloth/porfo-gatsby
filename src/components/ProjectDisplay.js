@@ -1,22 +1,30 @@
 import React, { useRef } from "react";
 // import React, { useRef, useEffect } from "react";
-
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "./ProjectDisplay.module.css";
+import ipadScreenshot from "../assets/images/serious-index-ipad.png";
+import laptopScreenshot from "../assets/images/serious-cart.png";
 
 const ProjectDisplay = () => {
   const refProjectDisp = useRef();
   const { scrollYProgress } = useViewportScroll(refProjectDisp);
 
-  const yoffs_01 = useTransform(
+  const yoffs_01_pre = useTransform(
     scrollYProgress,
-    value => Math.sin(value * 100) * 10
+    value => Math.sin(value * 200) * 10
   );
-  // const yoffs_01 = useTransform(yoffs_01_pre, [-10, 10], [-10, 20], {
-  //   // ease: [1, -0.5, 0, 1.5],
-  //   ease: [[0.7, 0, 0.3, 1]],
-  // });
+
+  const yoffs_01 = useTransform(
+    yoffs_01_pre,
+    [-10, 10],
+    [-10, 20],
+    [
+      {
+        ease: [1, -0.4, 0, 1.4],
+      },
+    ]
+  );
 
   // const yoffs_02 = useTransform(
   //   scrollYProgress,
@@ -55,7 +63,7 @@ const ProjectDisplay = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <image
-          xlinkHref="/images/serious-cart.png"
+          xlinkHref={laptopScreenshot}
           x="240"
           y="214"
           width="860"
@@ -89,7 +97,7 @@ const ProjectDisplay = () => {
         </g>
 
         <image
-          xlinkHref="/images/serious-index-ipad.png"
+          xlinkHref={ipadScreenshot}
           x="940"
           y="320"
           width="450"

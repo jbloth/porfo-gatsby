@@ -1,3 +1,4 @@
+@value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value fontAnimations from "../../static/fonts/fonts.css";
 
 .container {
@@ -9,4 +10,12 @@
   font-size: 4rem;
   letter-spacing: 2rem;
   color: #251684;
+  text-align: center;
+}
+
+@media tiny {
+  .text {
+    font-size: 3rem;
+    letter-spacing: 0.6rem;
+  }
 }

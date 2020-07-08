@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./WanderingText.module.css";
+import { setStartOffset } from "../lib/animation-utils";
 
 const WanderingText = ({ text }) => {
   const refWanderText = useRef(); // container dom node
@@ -8,37 +9,11 @@ const WanderingText = ({ text }) => {
 
   // Set scroll listener TODO: better use useLayoutEffect?
   useEffect(() => {
-    const windowHeight = window.innerHeight;
-    const height = refWanderText.current.clientHeight; // height of container div
-
-    const topY = refWanderText.current.getBoundingClientRect().top;
-    const bottomY = refWanderText.current.getBoundingClientRect().bottom;
-    //const scrollPosition = window.scrollY;
-
-    if (topY >= 0 - height && topY <= windowHeight) {
-      const offset =
-        initialStartOffset -
-        Math.floor(
-          ((windowHeight + height - bottomY) / (windowHeight + height)) * 100
-        );
-      refWanderTextPath.current.setAttribute("startOffset", `${offset}%`);
-    }
+    // initial start-offset of text-path
+    setStartOffset(refWanderText, refWanderTextPath, initialStartOffset, 100);
 
     const handleScroll = () => {
-      const topY = refWanderText.current.getBoundingClientRect().top;
-      const bottomY = refWanderText.current.getBoundingClientRect().bottom;
-      //const scrollPosition = window.scrollY;
-
-      if (topY >= 0 - height && topY <= windowHeight) {
-        const offset =
-          initialStartOffset +
-          Math.floor(
-            ((windowHeight + height - bottomY) / (windowHeight + height)) * 100
-          );
-        refWanderTextPath.current.setAttribute("startOffset", `${offset}%`);
-        // console.log("bottomY: " + bottomY);
-        // console.log("offset: " + offset);
-      }
+      setStartOffset(refWanderText, refWanderTextPath, initialStartOffset, 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -53,7 +28,7 @@ const WanderingText = ({ text }) => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 1440 160"
+        viewBox="0 0 1440 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

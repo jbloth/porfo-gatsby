@@ -1,6 +1,7 @@
 @value colors: "../styles/colors.css";
 @value textblue from colors;
 @value fontAnimations from "../../static/fonts/fonts.css";
+@value small, medium, large from "../styles/breakpoints.css";
 
 .container {
   width: 100%;
@@ -8,6 +9,12 @@
 
 .text {
   font-family: fontAnimations;
-  font-size: 96px;
+  font-size: 10rem;
   fill: textblue;
+}
+
+@media small {
+  .text {
+    font-size: 14rem;
+  }
 }

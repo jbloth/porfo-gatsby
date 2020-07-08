@@ -1,26 +1,24 @@
 @value fontAnimations from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bgOrange from colors;
+@value bgOrange, lightyellow from colors;
 
 .container {
   padding: 2rem;
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: bgOrange;
+  justify-content: center;
+  background-color: lightyellow;
 }
 
-.logo {
-  font-family: fontAnimations;
-  font-size: 4rem;
-  align-self: flex-start;
+.footerMenu {
+  width: 60%;
 }
 
 .menuitems {
   display: flex;
-  font-family: fontAnimations;
-  font-size: 2rem;
+  justify-content: space-between;
+  font-size: 1.4rem;
 }
 
 .menuitem {

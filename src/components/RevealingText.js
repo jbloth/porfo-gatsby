@@ -46,7 +46,7 @@ const RevealingText = () => {
 
   return (
     <div className={styles.container} ref={refRevealText}>
-      <p className={styles.text}>HERE IS A THING I MADE:</p>
+      <p className={styles.text}>WHAT I'VE DONE BEFORE</p>
     </div>
   );
 };
