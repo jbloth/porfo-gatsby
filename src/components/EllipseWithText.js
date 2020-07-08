@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
+
 import styles from "./EllipseWithText.module.css";
 import { setStartOffset } from "../lib/animation-utils";
+import ThumbsUpImg from "../assets/images/Thumbsup.png";
 
 const EllipseWithText = ({ text }) => {
   const refEllipseWithText = useRef(); // container dom node
@@ -39,24 +41,23 @@ const EllipseWithText = ({ text }) => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 740 800"
+        viewBox="0 0 680 720"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <ellipse cx="370" cy="400" rx="250" ry="280" fill="#f5f5dc" />
+        <ellipse cx="340" cy="360" rx="250" ry="280" fill="#f5f5dc" />
         <image
-          xlinkHref="/images/Thumbsup.png"
-          x="105"
-          y="180"
+          xlinkHref={ThumbsUpImg}
+          x="85"
+          y="150"
           width="500"
           height="400"
         />
         <path
           id="path-for-text-ellipse"
           fill="none"
-          /*d="M120,400a250,280 0 1,0 500,0a250,280 0 1,0 -500,0"*/
-          /* d="M120,400A250,280 0 1 1620,400A250,280 0 1 1120,400"*/
-          d="M620,400 A250,280 0 1 1 120,400 A250,280 0 1 1620,400A250,280 0 1 1120,400"
+          /* d="M90,360A250,280 0 1 1590,360A250,280 0 1 190,360" */
+          d="M590,360 A250,280 0 1 1 90,360 A250,280 0 1 1590,360A250,280 0 1 190,360"
         />
 
         <text className={styles.pathText} dy="-10">

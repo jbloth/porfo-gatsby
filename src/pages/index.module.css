@@ -1,12 +1,14 @@
-@value small, medium, large from "../styles/breakpoints.css";
+@value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value colors: "../styles/colors.css";
 @value bgOrange, lightyellow, textblue from colors;
 
 /* ---- general ---- */
-.textContainer {
-  width: 100%;
-  padding: 2rem 8rem;
-}
+/*.indexSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}*/
 
 .paragraph {
   text-align: justify;
@@ -20,13 +22,32 @@
   align-items: center; */
 }
 
+.table,
+.row,
+.column {
+  border: 1px solid textblue;
+  border-collapse: collapse;
+}
+
+.column {
+  padding: 1rem;
+}
+
+@media medium {
+  .flexRow {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media tiny {
+  .textContainer {
+    padding: 2rem 4rem;
+  }
+}
+
 /* ---- hero section ---- */
 .hero {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: bgOrange;
 }
 
@@ -37,6 +58,7 @@
 
 @media medium {
   .myNameWrap {
+    width: 80%;
     top: -10px;
     left: -20px;
   }
@@ -44,6 +66,7 @@
 
 @media small {
   .myNameWrap {
+    margin-top: 0;
     width: 100%;
     top: -10px;
     left: -20px;
@@ -61,36 +84,12 @@
 
 /* ---- projects section ---- */
 .projects {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
   background-color: bgOrange;
 }
 
-.heresAWrap {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.projectImgContainer {
-  width: 40%;
-  /* background-color: textblue; */
-  padding: 1rem 1rem 1rem 1rem;
-  border-radius: 5px;
-  /* position: relative; */
-}
-
-.projectImg {
-  width: 80%;
-  /* border-radius: 5px;
-  border: 6px solid textblue;
-   position: absolute;
-  top: 3rem;
-  left: 3rem; */
+.projectWrap {
+  width: 70%;
+  max-width: 1200px;
 }
 
 .projectInfo {
@@ -98,9 +97,46 @@
   width: 60%;
 }
 
+.table {
+  width: 100%;
+}
+
+.firstCol {
+  width: 30%;
+}
+
+.secondCol {
+  width: 70%;
+}
+
+.buttonArea {
+  display: flex;
+}
+
+.buttonWrap {
+  margin: 2rem;
+}
+
+@media tiny {
+  .projectWrap {
+    width: 90%;
+  }
+}
+
 /* ---- education section ---- */
 .education {
   background-color: lightyellow;
+}
+
+.revealingTextWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+@media tiny {
 }
 
 /* ---- contact section ---- */
@@ -116,4 +152,28 @@
 .contactFormWrap {
   width: 50%;
   padding: 12rem 4rem 2rem 4rem;
+}
+
+@media medium {
+  .goodNowWrap {
+    width: 80%;
+    padding: 2rem;
+  }
+
+  .contactFormWrap {
+    width: 80%;
+    padding: 4rem 4rem 2rem 4rem;
+  }
+}
+
+@media smallest {
+  .goodNowWrap {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contactFormWrap {
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+  }
 }

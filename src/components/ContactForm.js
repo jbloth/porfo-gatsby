@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "./ContactForm.module.css";
 import Button from "./Button";
-console.log(styles.btn__big);
+
 const ContactForm = ({ lightTheme = true }) => {
   return (
     <div>
-      <h1>Contact</h1>
+      <h2>Contact</h2>
       <form>
         <div className={styles.formGroup}>
           <input

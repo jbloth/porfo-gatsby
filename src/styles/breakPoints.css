@@ -1,4 +1,6 @@
-@value large: only screen and (min-width: 62.5em); /* 1000px */
-@value medium: only screen and (min-width: 56.25em) /* 900px */
+@value large: only screen and (max-width: 62.5em); /* 1000px */
+@value medium: only screen and (max-width: 56.25em); /* 900px */
 @value small: only screen and (max-width: 44em); /* 700px */
 @value smallest: only screen and (max-width: 34.4em); /* 550px */
+@value tiny: only screen and (max-width: 30em); /* 480px */
+@value tiniest: only screen and (max-width: 23.75em); /* 380px */
