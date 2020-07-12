@@ -43,7 +43,15 @@ const ShapeWithPathText = ({ text }) => {
         viewBox="0 0 710 740"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="myNameIsTitle myNameIsDescription"
+        role="img"
       >
+        <title id="myNameIsTitle">Portrait image of the site's owner</title>
+        <desc id="myNameIsDescription">
+          Portrait image of a woman surrounded by an animated text, saying "My
+          name is Julia..."
+        </desc>
+
         <defs>
           <mask id="mask">
             <path
@@ -56,7 +64,7 @@ const ShapeWithPathText = ({ text }) => {
         </defs>
 
         <path
-          fill="#f5f5dc"
+          id={styles.shape}
           opacity="1"
           transform="rotate(-90 370 370)"
           d="M233.159 553.413C140.179 488.67 -6.17167 489.153 100.219 335.761C153.993 258.231 126.493 229.15 274.648 135.187C422.803 41.2234 520.827 133.738 628.833 241.744C731.477 344.388 616.155 494.218 534.648 553.413C425.053 633.007 276.112 583.321 233.159 553.413Z"

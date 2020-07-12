@@ -1,6 +1,23 @@
-@value bg: #f7f5f5;
 @value bgOrange: #f58867;
+@value bgOrange: #FA8E6E;
+@value bgOrange: #c45b41;
+/* @value bgOrange: #fac3bb; */
+/* @value bgOrange: #94B0C4; */
+/* @value bgOrange: #aacbe3; */
+
+/* @value bgOrange: #b9d9f0; */
+/* @value bgOrange: #b5d1e6; */
+/* @value bgOrange: #bac7d1; */
+/* @value bgOrange: #d5e1e6; */
+@value bgOrange: #d5e4e6;
+/* @value bgOrange: #c0e0ed; */
+
+/* @value bgOrange: #f2eae6; */
+
 @value lightyellow: #f5f5dc;
+@value lightyellow: #f2f2e4;
+
 @value textblue: #251684;
-/*@value ochre: #d59f35;*/
+@value highlight: #f58867;
+
 @value linkFocus: #850002;

@@ -6,8 +6,26 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Julia`,
-    description: `a web developer`,
+    title: `Julia Makes`,
+    description: `Web developer from Cologne`,
+    url: "",
+    image: "",
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images/`,
+      },
+    },
+  ],
 };

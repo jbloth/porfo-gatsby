@@ -1,6 +1,7 @@
+@value tiniest, tiny, small, medium, large from "../styles/breakpoints.css";
 @value fontAnimations from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow from colors;
+@value bgOrange, lightyellow, textblue, highlight from colors;
 
 .container {
   padding: 2rem;
@@ -8,7 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightyellow;
+  background-color: textblue;
+  color: lightyellow;
 }
 
 .footerMenu {
@@ -24,3 +26,29 @@
 .menuitem {
   padding: 0 1rem;
 }
+
+.footerLink {
+  color: lightyellow;
+}
+
+.footerLink:hover {
+  color: highlight;
+}
+
+@media small {
+  .footerMenu {
+    width: 80%;
+  }
+}
+
+@media tiny {
+  .container {
+    justify-content: flex-start;
+  }
+}
+
+/*@media tiniest {
+  .footerMenu {
+    width: 70%;
+  }
+}*/

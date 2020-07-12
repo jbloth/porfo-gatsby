@@ -1,5 +1,5 @@
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow, textblue from colors;
+@value bgOrange, lightyellow, textblue, highlight from colors;
 @value fontText from "../../static/fonts/fonts.css";
 
 .formInput {
@@ -21,11 +21,15 @@
 }
 
 ::placeholder {
-  color: bgOrange;
+  color: highlight;
 }
 
 .formInput--bgLight {
   background-color: lightyellow;
+}
+
+.inputLabel {
+  display: none;
 }
 
 .buttonRow {

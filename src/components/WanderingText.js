@@ -31,7 +31,13 @@ const WanderingText = ({ text }) => {
         viewBox="0 0 1440 200"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="imATitle imADescription"
+        role="img"
       >
+        <title id="imATitle">I'm a web developer</title>
+        <desc id="imADescription">
+          Animated text saying "My name is Julia..."
+        </desc>
         <path
           id="path-for-text-ima"
           d="M-52 103.217C110.5 64 252 55 408.5 55C697.5 55 834.361 108.919 1060.5 131C1209 145.5 1379.5 155.937 1513 103.217"
