@@ -44,8 +44,24 @@ const EllipseWithText = ({ text }) => {
         viewBox="0 0 680 720"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="hireMeTitle hireMeDescription"
+        role="img"
       >
-        <ellipse cx="340" cy="360" rx="250" ry="280" fill="#f5f5dc" />
+        <title id="hireMeTitle">Thumbs up graphic</title>
+        <desc id="hireMeDescription">
+          A graphic of a hand making a "thumbs-up" gesture surrounded by an
+          animated text, saying "Good? Now hire me", placed next to the contact
+          form.
+        </desc>
+
+        <ellipse
+          id={styles.ellipse}
+          cx="340"
+          cy="360"
+          rx="250"
+          ry="280"
+          fill="#f5f5dc"
+        />
         <image
           xlinkHref={ThumbsUpImg}
           x="85"

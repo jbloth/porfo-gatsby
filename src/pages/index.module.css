@@ -3,13 +3,6 @@
 @value bgOrange, lightyellow, textblue from colors;
 
 /* ---- general ---- */
-/*.indexSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}*/
-
 .paragraph {
   text-align: justify;
 }
@@ -18,8 +11,8 @@
   width: 100%;
   padding: 2rem 4rem;
   display: flex;
-  /* flex-direction: column;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 .table,
@@ -40,27 +33,27 @@
   }
 }
 
-@media tiny {
-  .textContainer {
-    padding: 2rem 4rem;
-  }
-}
-
 /* ---- hero section ---- */
 .hero {
   background-color: bgOrange;
+  padding: 0;
+  height: calc(100vh - 108px);
+  min-height: 500px;
 }
 
 .myNameWrap {
-  margin-top: 5rem;
-  width: 40%;
+  /*margin-top: 5rem;
+  width: 40%;*/
+  width: 60%;
+  max-width: 600px;
+  max-height: 100%;
 }
 
 @media medium {
   .myNameWrap {
     width: 80%;
-    top: -10px;
-    left: -20px;
+    /*  top: -10px;
+    left: -20px; */
   }
 }
 
@@ -68,8 +61,6 @@
   .myNameWrap {
     margin-top: 0;
     width: 100%;
-    top: -10px;
-    left: -20px;
   }
 }
 
@@ -80,6 +71,35 @@
 
 .imAWrap {
   width: 100%;
+}
+
+.skillRow {
+  display: flex;
+}
+
+.skillLabel {
+  vertical-align: top;
+  min-width: 12rem;
+}
+
+.progressBarWrap {
+  width: 200px;
+}
+
+@media tiny {
+  .skillLabel {
+    min-width: 10rem;
+  }
+}
+
+@media tiniest {
+  .skillRow {
+    flex-direction: column;
+  }
+
+  .progressBarWrap {
+    width: 100%;
+  }
 }
 
 /* ---- projects section ---- */
@@ -117,6 +137,21 @@
   margin: 2rem;
 }
 
+.buttons {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media smallest {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media tiny {
   .projectWrap {
     width: 90%;
@@ -136,7 +171,21 @@
   padding: 0 4rem;
 }
 
+.columnNoBorder {
+  vertical-align: top;
+  min-width: 12rem;
+}
+
 @media tiny {
+  .columnNoBorder {
+    min-width: 10rem;
+  }
+}
+
+@media tiniest {
+  .columnNoBorder {
+    min-width: 6rem;
+  }
 }
 
 /* ---- contact section ---- */
@@ -146,12 +195,14 @@
 
 .goodNowWrap {
   width: 50%;
+  max-width: 800px;
   padding: 2rem;
 }
 
 .contactFormWrap {
   width: 50%;
-  padding: 12rem 4rem 2rem 4rem;
+  max-width: 900px;
+  padding: 0 4rem;
 }
 
 @media medium {

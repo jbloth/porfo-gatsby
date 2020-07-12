@@ -1,6 +1,7 @@
+@value tiniest, tiny, smallest, small from "../styles/breakpoints.css";
 @value fontAnimations from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bgOrange from colors;
+@value bgOrange, textblue from colors;
 
 .container {
   padding: 2rem;
@@ -9,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: bgOrange;
+  position: relative;
 }
 
 .logo {
@@ -25,4 +27,24 @@
 
 .menuitem {
   padding: 0 1rem;
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  fill: textblue;
+  display: none;
+}
+
+@media small {
+  .iconContainer {
+    width: 3rem;
+    height: 3rem;
+    fill: textblue;
+    display: block;
+  }
+
+  .headerMenu {
+    display: none;
+  }
 }

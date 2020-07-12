@@ -1,6 +1,6 @@
 @value small, medium, large from "../styles/breakpoints.css";
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow, textblue from colors;
+@value bgOrange, lightyellow, textblue, highlight from colors;
 @value fontAnimations, fontText from "../../static/fonts/fonts.css";
 
 .btn {
@@ -16,6 +16,12 @@
   text-align: center;
   padding: 0 12px;
   cursor: pointer;
+}
+
+.btn:focus {
+  background-color: highlight;
+  color: textblue;
+  border: 2px solid textblue;
 }
 
 .btn:hover {

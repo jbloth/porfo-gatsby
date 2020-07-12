@@ -9,13 +9,19 @@ const Footer = () => {
       <nav className={styles.footerMenu}>
         <ul className={styles.menuitems}>
           <li className={styles.menuitem}>
-            <Link to="/privacy">Privacy Note</Link>
+            <Link to="/privacy" className={styles.footerLink}>
+              Privacy Note
+            </Link>
           </li>
           <li className={styles.menuitem}>
-            <Link to="/legal">Legal Note</Link>
+            <Link to="/legal" className={styles.footerLink}>
+              Legal Note
+            </Link>
           </li>
           <li className={styles.menuitem}>
-            <Link to="/#contactForm">Contact</Link>
+            <Link to="/#contactForm" className={styles.footerLink}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

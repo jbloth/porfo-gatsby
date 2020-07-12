@@ -1,9 +1,10 @@
 @value colors: "../styles/colors.css";
-@value textblue from colors;
+@value textblue, lightyellow from colors;
 @value fontAnimations from "../../static/fonts/fonts.css";
 
 .container {
   width: 100%;
+  height: 100%;
 }
 
 .pathText {
@@ -11,4 +12,9 @@
   font-size: 5rem;
   letter-spacing: 2rem;
   fill: textblue;
+}
+
+#shape {
+  fill: lightyellow;
+  width: 300px;
 }

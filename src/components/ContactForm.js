@@ -7,21 +7,26 @@ const ContactForm = ({ lightTheme = true }) => {
   return (
     <div>
       <h2>Contact</h2>
-      <form>
+      <form method="post" action="#">
         <div className={styles.formGroup}>
           <input
             type="text"
+            aria-label="Name"
             name="Name"
             placeholder="Name"
             className={styles.formInput}
           />
+
           <input
             type="email"
+            aria-label="Email"
             name="Email"
             placeholder="Email"
             className={styles.formInput}
           />
+
           <textarea
+            aria-label="Message"
             name="message"
             placeholder="Message"
             rows="10"
@@ -30,7 +35,9 @@ const ContactForm = ({ lightTheme = true }) => {
         </div>
         <div className={styles.buttonRow}>
           <div className={styles.buttonWrap}>
-            <Button big>SEND</Button>
+            <Button type="submit" big>
+              SEND
+            </Button>
           </div>
         </div>
       </form>

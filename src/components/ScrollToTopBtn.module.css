@@ -3,13 +3,13 @@
 
 .scrollTopBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.4rem;
+  right: 1.4rem;
   background-color: textblue;
   z-index: 93;
   cursor: pointer;
   width: 3rem;
-  height: 4.5rem;
+  height: 4.2rem;
   border-radius: 3px;
   display: none;
 }

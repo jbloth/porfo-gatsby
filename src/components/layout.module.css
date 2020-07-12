@@ -1,6 +1,7 @@
+@value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value fontAnimations, fontText from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value lightyellow, lightblue, textblue, linkFocus from colors;
+@value lightyellow, textblue, linkFocus, highlight from colors;
 
 /* ---- reset and base styles ---- */
 *,
@@ -52,7 +53,7 @@ a {
 }
 
 a:hover {
-  color: linkFocus;
+  color: highlight;
 }
 
 ul {
@@ -77,4 +78,11 @@ section {
   width: 100%;
   max-width: 1200px;
   padding: 2rem 8rem;
+}
+
+@media tiny {
+  :global(.textContainer) {
+    padding: 2rem 4rem;
+    font-size: 1.4rem;
+  }
 }

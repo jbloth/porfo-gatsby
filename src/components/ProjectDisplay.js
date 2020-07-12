@@ -3,8 +3,8 @@ import React, { useRef } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "./ProjectDisplay.module.css";
-import ipadScreenshot from "../assets/images/serious-index-ipad.png";
-import laptopScreenshot from "../assets/images/serious-cart.png";
+import ipadScreenshot from "../assets/images/serious-index-ipad.jpg";
+import laptopScreenshot from "../assets/images/serious-cart.jpg";
 
 const ProjectDisplay = () => {
   const refProjectDisp = useRef();
@@ -41,15 +41,6 @@ const ProjectDisplay = () => {
     value => Math.sin(value * 260 - 300) * 10 + 130
   );
 
-  //   let offsetTop = useRef(0);
-  //   let offsetBottom = useRef(0);
-
-  //   useEffect(() => {
-  //     const height = refProjectDisp.current.clientHeight; // height of container div
-  //     offsetTop.current = refProjectDisp.current.offsetTop;
-  //     offsetBottom.current = offsetTop + height;
-  //   }, []);
-
   return (
     <div className={styles.container} ref={refProjectDisp}>
       <svg
@@ -61,7 +52,15 @@ const ProjectDisplay = () => {
         fillRule="evenodd"
         clipRule="evenodd"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="projectDisplayTitle projectDisplayDescription"
+        role="img"
       >
+        <title id="projectDisplayTitle">Example project screenshots.</title>
+        <desc id="projectDisplayDescription">
+          A graphic of a laptop and an iPad showing images from a project I
+          made. The graphics are surrounded by an animated text, saying "Here is
+          a thing I made."
+        </desc>
         <image
           xlinkHref={laptopScreenshot}
           x="240"
