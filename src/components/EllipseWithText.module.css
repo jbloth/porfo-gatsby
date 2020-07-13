@@ -1,6 +1,6 @@
 @value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value colors: "../styles/colors.css";
-@value textblue, lightyellow from colors;
+@value textblue, bgLight from colors;
 @value fontAnimations from "../../static/fonts/fonts.css";
 
 .container {
@@ -15,7 +15,7 @@
 }
 
 #ellipse {
-  fill: lightyellow;
+  fill: bgLight;
 }
 
 @media small {

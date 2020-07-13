@@ -1,11 +1,15 @@
-import React from "react"
+import React from "react";
+
+import Layout from "../components/Layout";
 
 const err404 = () => {
   return (
-    <div>
-      <h1>Page not found</h1>
-    </div>
-  )
-}
+    <Layout>
+      <section>
+        <h1>Page not found</h1>
+      </section>
+    </Layout>
+  );
+};
 
-export default err404
+export default err404;

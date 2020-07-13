@@ -1,10 +1,10 @@
 @value tiniest, tiny, smallest, small from "../styles/breakpoints.css";
 @value fontAnimations from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow, textblue from colors;
+@value bgLight, textblue from colors;
 
 .container {
-  background-color: lightyellow;
+  background-color: bgLight;
   z-index: 100;
   position: fixed;
   display: flex;
@@ -39,4 +39,14 @@
   font-size: 2rem;
   padding: 2rem;
   text-align: center;
+}
+
+@media tiny {
+  .iconContainer {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
 }

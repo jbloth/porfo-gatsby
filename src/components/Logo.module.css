@@ -1,0 +1,6 @@
+@value colors: "../styles/colors.css";
+@value textblue from colors;
+
+.logoPath {
+  fill: textblue;
+}

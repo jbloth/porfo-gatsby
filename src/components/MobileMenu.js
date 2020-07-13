@@ -26,6 +26,11 @@ const MobileMenu = ({ onCloseClick }) => {
         <nav>
           <ul className={styles.menuitems}>
             <li className={styles.menuitem}>
+              <Link onClick={onCloseClick} to="/">
+                home
+              </Link>
+            </li>
+            <li className={styles.menuitem}>
               <Link onClick={onCloseClick} to="/#about">
                 about
               </Link>
@@ -36,6 +41,11 @@ const MobileMenu = ({ onCloseClick }) => {
               </Link>
             </li>
             <li className={styles.menuitem}>
+              <Link onClick={onCloseClick} to="/#contactForm">
+                contact
+              </Link>
+            </li>
+            <li className={styles.menuitem}>
               <Link onClick={onCloseClick} to="/privacy">
                 privacy
               </Link>
@@ -43,11 +53,6 @@ const MobileMenu = ({ onCloseClick }) => {
             <li className={styles.menuitem}>
               <Link onClick={onCloseClick} to="/legal">
                 legal notice
-              </Link>
-            </li>
-            <li className={styles.menuitem}>
-              <Link onClick={onCloseClick} to="/#contactForm">
-                contact
               </Link>
             </li>
           </ul>

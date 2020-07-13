@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import styles from "./Header.module.css";
+import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 
 const BurgerIcon = props => {
@@ -38,7 +39,9 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
-        <Link to="/">WOBBLYWEB</Link>
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
       <nav className={styles.headerMenu}>
         <ul className={styles.menuitems}>

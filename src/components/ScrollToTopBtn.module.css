@@ -1,5 +1,5 @@
 @value colors: "../styles/colors.css";
-@value lightyellow, lightblue, textblue, linkFocus from colors;
+@value bgLight, textblue from colors;
 
 .scrollTopBtn {
   position: fixed;
@@ -23,5 +23,5 @@
   width: 4rem;
   height: 4rem;
   /*padding: 0.4rem;*/
-  fill: lightyellow;
+  fill: bgLight;
 }
