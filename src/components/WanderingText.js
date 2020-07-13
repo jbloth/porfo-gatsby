@@ -48,7 +48,7 @@ const WanderingText = ({ text }) => {
         <text className={styles.pathText}>
           <textPath
             ref={refWanderTextPath}
-            id="text-path"
+            id="walker-text-path"
             xlinkHref="#path-for-text-ima"
             startOffset={`${initialStartOffset}%`}
             alignmentBaseline="middle"

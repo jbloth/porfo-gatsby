@@ -119,7 +119,7 @@ const ShapeWithPathText = ({ text }) => {
         <text className={styles.pathText} dy="-10">
           <textPath
             ref={refShapeWithTextPath}
-            id="text-path"
+            id="shape-text-path"
             xlinkHref="#path-for-text-shape"
             startOffset={`${initialStartOffset}%`}
             alignmentBaseline="text-bottom"
