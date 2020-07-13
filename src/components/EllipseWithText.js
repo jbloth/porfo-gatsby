@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import styles from "./EllipseWithText.module.css";
 import { setStartOffset } from "../lib/animation-utils";
 import ThumbsUpImg from "../assets/images/Thumbsup.png";
+import ThumbsUpImg_webp from "../assets/images/Thumbsup.webp";
 
 const EllipseWithText = ({ text }) => {
   const refEllipseWithText = useRef(); // container dom node
@@ -55,13 +56,39 @@ const EllipseWithText = ({ text }) => {
         </desc>
 
         <ellipse id={styles.ellipse} cx="340" cy="360" rx="250" ry="280" />
-        <image
+
+        {/* <image
           xlinkHref={ThumbsUpImg}
           x="85"
           y="150"
           width="500"
           height="400"
-        />
+        /> */}
+        <foreignObject x="155" y="150" width="360" height="414">
+          <picture>
+            <source
+              width="360"
+              height="auto"
+              type="image/webp"
+              srcset={ThumbsUpImg_webp}
+            />
+            <source
+              width="360"
+              height="auto"
+              type="image/png"
+              srcset={ThumbsUpImg}
+            />
+            <img
+              x="155"
+              y="150"
+              width="360"
+              height="auto"
+              src={ThumbsUpImg}
+              alt=""
+            />
+          </picture>
+        </foreignObject>
+
         <path
           id="path-for-text-ellipse"
           fill="none"

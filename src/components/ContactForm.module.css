@@ -28,6 +28,7 @@
 
 ::placeholder {
   color: highlight;
+  opacity: 1;
 }
 
 .formInput--bgLight {
