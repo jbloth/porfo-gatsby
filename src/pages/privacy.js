@@ -68,11 +68,6 @@ const privacy = () => {
           </div>
 
           <div className="textContainer">
-            <h2>Cookies</h2>
-            <p>TODOTODOTODOTODO</p>
-          </div>
-
-          <div className="textContainer">
             <h2>How we use your data</h2>
             <p>
               We only collect and further process your personal data for the

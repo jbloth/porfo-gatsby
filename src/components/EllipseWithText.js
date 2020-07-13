@@ -54,14 +54,7 @@ const EllipseWithText = ({ text }) => {
           form.
         </desc>
 
-        <ellipse
-          id={styles.ellipse}
-          cx="340"
-          cy="360"
-          rx="250"
-          ry="280"
-          fill="#f5f5dc"
-        />
+        <ellipse id={styles.ellipse} cx="340" cy="360" rx="250" ry="280" />
         <image
           xlinkHref={ThumbsUpImg}
           x="85"

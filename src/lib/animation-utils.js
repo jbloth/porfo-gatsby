@@ -29,7 +29,6 @@ export const setStartOffset = (
         Math.floor(
           ((windowHeight + height - bottomY) / (windowHeight + height)) * factor
         );
-
     refTarget.current.setAttribute("startOffset", `${offset}%`);
   }
 };

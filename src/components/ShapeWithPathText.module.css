@@ -1,5 +1,5 @@
 @value colors: "../styles/colors.css";
-@value textblue, lightyellow from colors;
+@value textblue, bgLight from colors;
 @value fontAnimations from "../../static/fonts/fonts.css";
 
 .container {
@@ -15,6 +15,6 @@
 }
 
 #shape {
-  fill: lightyellow;
+  fill: bgLight;
   width: 300px;
 }

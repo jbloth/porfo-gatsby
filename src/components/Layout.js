@@ -10,10 +10,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Metas />
-      <Header />
-      {children}
-      <ScrollToTopBtn />
-      <Footer />
+      <div className="site">
+        <Header />
+        <div className="site-content">{children}</div>
+        <ScrollToTopBtn />
+        <Footer />
+      </div>
     </>
   );
 };

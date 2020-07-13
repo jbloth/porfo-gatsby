@@ -5,7 +5,8 @@ import { setStartOffset } from "../lib/animation-utils";
 const WanderingText = ({ text }) => {
   const refWanderText = useRef(); // container dom node
   const refWanderTextPath = useRef(); // textpath dom node
-  const initialStartOffset = -30; // initial text offset for text path
+  const initialStartOffset = 0; // initial text offset for text path
+  //const initialStartOffset = -30; // doesn't work in safari
 
   // Set scroll listener TODO: better use useLayoutEffect?
   useEffect(() => {
@@ -40,7 +41,8 @@ const WanderingText = ({ text }) => {
         </desc>
         <path
           id="path-for-text-ima"
-          d="M-52 103.217C110.5 64 252 55 408.5 55C697.5 55 834.361 108.919 1060.5 131C1209 145.5 1379.5 155.937 1513 103.217"
+          /* d="M-52 103.217C110.5 64 252 55 408.5 55C697.5 55 834.361 108.919 1060.5 131C1209 145.5 1379.5 155.937 1513 103.217" */
+          d="M -515 197 C -67 86 252 55 408.5 55 C 697.5 55 834.361 108.919 1060.5 131 C 1209 145.5 1379.5 155.937 1513 103.217"
         />
 
         <text className={styles.pathText}>

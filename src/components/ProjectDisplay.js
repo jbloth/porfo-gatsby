@@ -10,6 +10,11 @@ const ProjectDisplay = () => {
   const refProjectDisp = useRef();
   const { scrollYProgress } = useViewportScroll(refProjectDisp);
 
+  // const yoffs_01_pre = useTransform(
+  //   scrollYProgress,
+  //   value => Math.sin(value * 200) * 10
+  // );
+
   const yoffs_01_pre = useTransform(
     scrollYProgress,
     value => Math.sin(value * 200) * 10
@@ -131,7 +136,10 @@ const ProjectDisplay = () => {
         </g>
 
         <g transform="matrix(1.05943,0,0,1.05943,-70.1993,-47.0564)">
-          <g transform="matrix(1,0,0,1,-129.149,-18.0208)">
+          <g
+            transform="matrix(1,0,0,1,-129.149,-18.0208)"
+            style={{ x: 0, y: yoffs_01 }}
+          >
             <path
               d="M427.353,1138.6C422.029,1133.62 420.814,1127.61 427.924,1120.57C437.285,1111.31 445.654,1101.77 450.251,1096.29C457.151,1088.08 466.152,1080.92 455.751,1071.68C445.837,1062.88 456.367,1058.53 472.354,1052.34C483.711,1047.93 507.449,1037.08 513.659,1040.47C522.515,1045.31 518.44,1067.67 517.511,1079.42C515.772,1101.42 508.965,1110.85 495.425,1100.12C490.849,1096.5 485.053,1103.16 479.248,1109.74C470.29,1119.88 460.836,1133.05 452.73,1141.59C441.768,1153.16 434.283,1145.07 427.353,1138.6Z"
               fill="#251684"
@@ -204,106 +212,96 @@ const ProjectDisplay = () => {
             />
           </g>
         </g>
+
         <g transform="matrix(1.05943,0,0,1.05943,-70.1993,-47.0564)">
           <g transform="matrix(0.415881,-0.909419,0.909419,0.415881,166.81,404.165)">
-            <motion.text style={{ x: 0, y: yoffs_01 }} className={styles.text}>
-              E
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_01 }}>
+              <text className={styles.text}>E</text>
+            </motion.g>
           </g>
+
           <g transform="matrix(-0.0323328,-0.999477,0.999477,-0.0323328,182.979,466.747)">
-            <motion.text style={{ x: 0, y: yoffs_03 }} className={styles.text}>
-              R
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_03 }}>
+              <text className={styles.text}>R</text>
+            </motion.g>
           </g>
+
           <g transform="matrix(0.944755,0.327778,-0.327778,0.944755,954.244,155.664)">
-            <motion.text style={{ x: 0, y: yoffs_01 }} className={styles.text}>
-              G
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_01 }}>
+              <text className={styles.text}>G</text>
+            </motion.g>
           </g>
+
           <g transform="matrix(0.989734,0.142924,-0.142924,0.989734,871.552,159.529)">
-            <motion.text style={{ x: 0, y: 0 }} className={styles.text}>
-              N
-            </motion.text>
+            <motion.g style={{ x: 0, y: 0 }}>
+              <text className={styles.text}>N</text>
+            </motion.g>
           </g>
+
           <g transform="matrix(1,0,0,1,820.928,161.42)">
-            <motion.text style={{ x: 0, y: yoffs_03 }} className={styles.text}>
-              I
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_03 }}>
+              <text className={styles.text}>I</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.99928,-0.0379332,0.0379332,0.99928,747.46,162.889)">
-            <motion.text style={{ x: 0, y: 0 }} className={styles.text}>
-              H
-            </motion.text>
+            <motion.g style={{ x: 0, y: 0 }}>
+              <text className={styles.text}>H</text>
+            </motion.g>
           </g>
           <g transform="matrix(-0.138356,-0.990383,0.990383,-0.138356,94.3591,915.189)">
-            <motion.text
-              style={{ x: 284, y: yoffs_04 }}
-              className={styles.text}
-            >
-              H
-            </motion.text>
+            <motion.g style={{ x: 284, y: yoffs_04 }}>
+              <text className={styles.text}>H</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.950221,-0.311575,0.311575,0.950221,-67.1602,153.315)">
-            <motion.text
-              style={{ x: 284, y: yoffs_04 }}
-              className={styles.text}
-            >
-              I
-            </motion.text>
+            <motion.g style={{ x: 284, y: yoffs_04 }}>
+              <text className={styles.text}>I</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.987356,-0.158522,0.158522,0.987356,378.792,88.6344)">
-            <motion.text
-              style={{ x: 284, y: yoffs_04 }}
-              className={styles.text}
-            >
-              T
-            </motion.text>
+            <motion.g style={{ x: 284, y: yoffs_04 }}>
+              <text className={styles.text}>T</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.617485,0.786583,-0.786583,0.617485,1289.94,-35.8535)">
-            <motion.text
-              style={{ x: 284, y: yoffs_04 }}
-              className={styles.text}
-            >
-              M
-            </motion.text>
+            <motion.g style={{ x: 284, y: yoffs_04 }}>
+              <text className={styles.text}>M</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.902746,0.430174,-0.430174,0.902746,911.984,-77.5297)">
-            <motion.text
-              style={{ x: 284, y: yoffs_04 }}
-              className={styles.text}
-            >
-              I
-            </motion.text>
+            <motion.g style={{ x: 284, y: yoffs_04 }}>
+              <text className={styles.text}>I</text>
+            </motion.g>
           </g>
           <g transform="matrix(1,0,0,1,419.63,160.402)">
-            <motion.text style={{ x: 0, y: yoffs_01 }} className={styles.text}>
-              A
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_03 }}>
+              <text className={styles.text}>A</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.351877,0.936046,-0.936046,0.351877,1421.25,338.526)">
-            <motion.text style={{ x: 0, y: yoffs_03 }} className={styles.text}>
-              A
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_03 }}>
+              <text className={styles.text}>A</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.0667157,0.997772,-0.997772,0.0667157,1448.04,402.383)">
-            <motion.text style={{ x: 0, y: 0 }} className={styles.text}>
-              D
-            </motion.text>
+            <motion.g style={{ x: 0, y: 0 }}>
+              <text className={styles.text}>D</text>
+            </motion.g>
           </g>
           <g transform="matrix(-0.232472,0.972603,-0.972603,-0.232472,1451.9,469.446)">
-            <motion.text style={{ x: 0, y: yoffs_03 }} className={styles.text}>
-              E
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_03 }}>
+              <text className={styles.text}>E</text>
+            </motion.g>
           </g>
           <g transform="matrix(1,0,0,1,279.062,175.848)">
-            <motion.text style={{ x: 0, y: yoffs_01 }} className={styles.text}>
-              s
-            </motion.text>
+            <motion.g style={{ x: 0, y: yoffs_01 }}>
+              <text className={styles.text}>s</text>
+            </motion.g>
           </g>
           <g transform="matrix(0.032939,-0.999457,0.999457,0.032939,179.89,529.599)">
-            <motion.text style={{ x: 0, y: 0 }} className={styles.text}>
-              E
-            </motion.text>
+            <motion.g style={{ x: 0, y: 0 }}>
+              <text className={styles.text}>E</text>
+            </motion.g>
           </g>
         </g>
       </svg>

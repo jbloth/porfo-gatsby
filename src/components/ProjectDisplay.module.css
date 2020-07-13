@@ -16,5 +16,6 @@
 @media small {
   .text {
     font-size: 14rem;
+    /* transform: scale(1.5); */
   }
 }

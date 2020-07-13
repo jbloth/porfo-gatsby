@@ -1,12 +1,18 @@
 @value colors: "../styles/colors.css";
-@value bgOrange, lightyellow, textblue, highlight from colors;
+@value bgDark, bgLight, textblue, highlight, linkFocus from colors;
 @value fontText from "../../static/fonts/fonts.css";
+
+.fieldGroup {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
 
 .formInput {
   display: block;
   width: 100%;
-  margin-bottom: 2rem;
-  background-color: lightyellow;
+
+  background-color: bgLight;
   border: 2px solid textblue;
   padding: 0.5rem;
   resize: none;
@@ -17,7 +23,7 @@
 }
 
 .formInput:focus {
-  outline: bgOrange auto 1px;
+  outline: bgDark auto 1px;
 }
 
 ::placeholder {
@@ -25,7 +31,7 @@
 }
 
 .formInput--bgLight {
-  background-color: lightyellow;
+  background-color: bgLight;
 }
 
 .inputLabel {
@@ -41,4 +47,9 @@
 
 .buttonWrap {
   min-width: 10rem;
+}
+
+.errorMsg {
+  color: linkFocus;
+  font-size: 1.2rem;
 }
