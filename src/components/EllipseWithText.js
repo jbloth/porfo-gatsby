@@ -12,7 +12,7 @@ const EllipseWithText = ({ text }) => {
 
   // Set scroll listener TODO: better use useLayoutEffect?
   useEffect(() => {
-    // initial start-offset of text-path
+    // initial start-offset of ellipse-
     setStartOffset(
       refEllipseWithText,
       refEllipseWithTextPath,
@@ -99,7 +99,7 @@ const EllipseWithText = ({ text }) => {
         <text className={styles.pathText} dy="-10">
           <textPath
             ref={refEllipseWithTextPath}
-            id="text-path"
+            id="ellipse-text-path"
             xlinkHref="#path-for-text-ellipse"
             startOffset={`${initialStartOffset}%`}
             alignmentBaseline="text-bottom"
