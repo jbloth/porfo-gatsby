@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import styles from "./shapeWithPathText.module.css";
 import { setStartOffset } from "../lib/animation-utils";
 import PortraitImg from "../assets/images/Me.png";
+import PortraitImg_webp from "../assets/images/Me.webp";
 
 const ShapeWithPathText = ({ text }) => {
   const refShapeWithText = useRef(); // container dom node
@@ -75,16 +76,45 @@ const ShapeWithPathText = ({ text }) => {
           d="M233.159 553.413C140.179 488.67 -6.17167 489.153 100.219 335.761C153.993 258.231 126.493 229.15 274.648 135.187C422.803 41.2234 520.827 133.738 628.833 241.744C731.477 344.388 616.155 494.218 534.648 553.413C425.053 633.007 276.112 583.321 233.159 553.413 C140.179 488.67 -6.17167 489.153 100.219 335.761 C153.993 258.231 126.493 229.15 274.648 135.187"
         />
 
-        <image
+        {/* <image
           xlinkHref={PortraitImg}
           alt="Portrait of the site owner"
           x="125"
           y="60"
           width="500"
           height="700"
-          /*clipPath="url(#mask)"*/
           mask="url(#mask)"
-        />
+        /> */}
+        <foreignObject
+          x="125"
+          y="100"
+          width="500"
+          height="625"
+          mask="url(#mask)"
+        >
+          <picture>
+            <source
+              width="500"
+              height="auto"
+              type="image/webp"
+              srcset={PortraitImg_webp}
+            />
+            <source
+              width="500"
+              height="auto"
+              type="image/png"
+              srcset={PortraitImg}
+            />
+            <img
+              x="125"
+              y="160"
+              width="500"
+              height="auto"
+              src={PortraitImg}
+              alt="Portrait of the site owner"
+            />
+          </picture>
+        </foreignObject>
 
         <text className={styles.pathText} dy="-10">
           <textPath

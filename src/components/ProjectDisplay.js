@@ -4,7 +4,9 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "./ProjectDisplay.module.css";
 import ipadScreenshot from "../assets/images/serious-index-ipad.jpg";
+import ipadScreenshot_webp from "../assets/images/serious-index-ipad.webp";
 import laptopScreenshot from "../assets/images/serious-cart.jpg";
+import laptopScreenshot_webp from "../assets/images/serious-cart.webp";
 
 const ProjectDisplay = () => {
   const refProjectDisp = useRef();
@@ -66,13 +68,40 @@ const ProjectDisplay = () => {
           made. The graphics are surrounded by an animated text, saying "Here is
           a thing I made."
         </desc>
-        <image
+
+        {/* <image
           xlinkHref={laptopScreenshot}
           x="240"
           y="214"
           width="860"
           height="560"
-        />
+        /> */}
+
+        <foreignObject x="242" y="214" width="860" height="548">
+          <picture>
+            <source
+              width="860"
+              height="auto"
+              type="image/webp"
+              srcset={laptopScreenshot_webp}
+            />
+            <source
+              width="860"
+              height="auto"
+              type="image/png"
+              srcset={laptopScreenshot}
+            />
+            <img
+              x="242"
+              y="214"
+              width="860"
+              height="auto"
+              src={laptopScreenshot}
+              alt=""
+            />
+          </picture>
+        </foreignObject>
+
         <g transform="matrix(1.05943,0,0,1.05943,9.50818,-76.8614)">
           <g transform="matrix(1,0,0,1,-75.2363,28.133)">
             <path
@@ -100,13 +129,38 @@ const ProjectDisplay = () => {
           </g>
         </g>
 
-        <image
+        {/* <image
           xlinkHref={ipadScreenshot}
           x="940"
           y="320"
           width="450"
           height="690"
-        />
+        /> */}
+
+        <foreignObject x="940" y="370" width="448" height="590">
+          <picture>
+            <source
+              width="450"
+              height="auto"
+              type="image/webp"
+              srcset={ipadScreenshot_webp}
+            />
+            <source
+              width="450"
+              height="auto"
+              type="image/png"
+              srcset={ipadScreenshot}
+            />
+            <img
+              x="940"
+              y="370"
+              width="450"
+              height="auto"
+              src={ipadScreenshot}
+              alt=""
+            />
+          </picture>
+        </foreignObject>
 
         <g transform="matrix(0.857833,0,0,0.857833,198.505,173.632)">
           <g transform="matrix(1.23501,0,0,1.23501,-313.236,-257.263)">
