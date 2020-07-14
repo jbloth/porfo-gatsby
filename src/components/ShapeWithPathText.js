@@ -97,13 +97,13 @@ const ShapeWithPathText = ({ text }) => {
               width="500"
               height="auto"
               type="image/webp"
-              srcset={PortraitImg_webp}
+              srcSet={PortraitImg_webp}
             />
             <source
               width="500"
               height="auto"
               type="image/png"
-              srcset={PortraitImg}
+              srcSet={PortraitImg}
             />
             <img
               x="125"

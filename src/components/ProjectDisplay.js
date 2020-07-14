@@ -5,8 +5,12 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import styles from "./ProjectDisplay.module.css";
 import ipadScreenshot from "../assets/images/serious-index-ipad.jpg";
 import ipadScreenshot_webp from "../assets/images/serious-index-ipad.webp";
+import ipadScreenshot_small from "../assets/images/serious-index-ipad_small.jpg";
+import ipadScreenshot_webp_small from "../assets/images/serious-index-ipad_small.webp";
 import laptopScreenshot from "../assets/images/serious-cart.jpg";
 import laptopScreenshot_webp from "../assets/images/serious-cart.webp";
+import laptopScreenshot_small from "../assets/images/serious-cart_small.jpg";
+import laptopScreenshot_webp_small from "../assets/images/serious-cart_small.webp";
 
 const ProjectDisplay = () => {
   const refProjectDisp = useRef();
@@ -83,13 +87,13 @@ const ProjectDisplay = () => {
               width="860"
               height="auto"
               type="image/webp"
-              srcset={laptopScreenshot_webp}
+              srcSet={`${laptopScreenshot_webp_small} 400w, ${laptopScreenshot_webp} 2000w`}
             />
             <source
               width="860"
               height="auto"
               type="image/png"
-              srcset={laptopScreenshot}
+              srcSet={`${laptopScreenshot_small} 400w, ${laptopScreenshot} 2000w`}
             />
             <img
               x="242"
@@ -143,13 +147,13 @@ const ProjectDisplay = () => {
               width="450"
               height="auto"
               type="image/webp"
-              srcset={ipadScreenshot_webp}
+              srcSet={`${ipadScreenshot_webp_small} 400w, ${ipadScreenshot_webp} 2000w`}
             />
             <source
               width="450"
               height="auto"
               type="image/png"
-              srcset={ipadScreenshot}
+              srcSet={`${ipadScreenshot_small} 400w, ${ipadScreenshot} 2000w`}
             />
             <img
               x="940"
