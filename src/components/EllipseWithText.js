@@ -4,6 +4,8 @@ import styles from "./EllipseWithText.module.css";
 import { setStartOffset } from "../lib/animation-utils";
 import ThumbsUpImg from "../assets/images/Thumbsup.png";
 import ThumbsUpImg_webp from "../assets/images/Thumbsup.webp";
+import ThumbsUpImg_small from "../assets/images/Thumbsup_small.png";
+import ThumbsUpImg_webp_small from "../assets/images/Thumbsup_small.webp";
 
 const EllipseWithText = ({ text }) => {
   const refEllipseWithText = useRef(); // container dom node
@@ -70,13 +72,13 @@ const EllipseWithText = ({ text }) => {
               width="360"
               height="auto"
               type="image/webp"
-              srcset={ThumbsUpImg_webp}
+              srcSet={`${ThumbsUpImg_webp_small} 400w, ${ThumbsUpImg_webp} 2000w`}
             />
             <source
               width="360"
               height="auto"
               type="image/png"
-              srcset={ThumbsUpImg}
+              srcSet={`${ThumbsUpImg_small} 400w, ${ThumbsUpImg} 2000w`}
             />
             <img
               x="155"

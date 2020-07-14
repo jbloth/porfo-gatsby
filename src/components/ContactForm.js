@@ -4,7 +4,17 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "./ContactForm.module.css";
 import Button from "./Button";
 
-const ContactForm = ({ lightTheme = true }) => {
+/* Contact from component using netlify froms and formik inspired by:
+  https://www.derekaspaulding.com/blog/simple-contact-form-with-gatsby-formik-and-netlify/
+*/
+const ContactForm = () => {
+  // Make form inputs compatible with netlify forms
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   return (
     <div>
       <h2>Contact</h2>
@@ -16,8 +26,19 @@ const ContactForm = ({ lightTheme = true }) => {
           message: "",
         }}
         onSubmit={(values, actions) => {
-          console.log(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact-from", ...values }),
+          })
+            .then(() => {
+              alert("Success");
+              actions.resetForm();
+            })
+            .catch(() => {
+              alert("Error");
+            })
+            .finally(() => actions.setSubmitting(false));
         }}
         validate={values => {
           const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -35,7 +56,11 @@ const ContactForm = ({ lightTheme = true }) => {
         }}
       >
         {() => (
-          <Form>
+          <Form
+            name="contact-from"
+            data-netlify={true}
+            netlify-honeypot="showStopper"
+          >
             <div className={styles.formGroup}>
               <div className={styles.fieldGroup}>
                 <Field
@@ -61,6 +86,18 @@ const ContactForm = ({ lightTheme = true }) => {
                 </p>
               </div>
 
+              <div className={styles.noShow}>
+                <Field
+                  name="showStopper"
+                  aria-label=""
+                  placeholder="showStopper"
+                  className={styles.formInput}
+                />
+                <p className={styles.errorMsg}>
+                  <ErrorMessage name="name" />
+                </p>
+              </div>
+
               <div className={styles.fieldGroup}>
                 <Field
                   name="message"
@@ -75,6 +112,8 @@ const ContactForm = ({ lightTheme = true }) => {
                 </p>
               </div>
             </div>
+
+            <div data-netlify-recaptcha="true"></div>
 
             <div className={styles.buttonRow}>
               <div className={styles.buttonWrap}>

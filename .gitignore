@@ -71,3 +71,6 @@ yarn-error.log
 #assets
 static
 src/assets
+
+# Local Netlify folder
+.netlify
