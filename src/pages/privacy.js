@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 
 import styles from "./privacy.module.css";
 import Layout from "../components/Layout";
+import noGithub from "../../noGithub";
 
 const privacy = () => {
   return (
@@ -22,9 +23,9 @@ const privacy = () => {
               pur­poses of data pro­tec­tion law is:
             </p>
             <br />
-            <p>Juliane Blothner</p>
-            <p>Pettenkofer Str. 2</p>
-            <p>50823 Köln</p>
+            <p>{noGithub.name}</p>
+            <p>{noGithub.street}</p>
+            <p>{noGithub.city}</p>
             <p>Germany</p>
             <br />
             <p>Our website address is: TODO</p>
@@ -92,14 +93,6 @@ const privacy = () => {
           </div>
 
           <div className="textContainer">
-            <h2>Where do we store your data?</h2>
-            <p>
-              Our server is located in
-              TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO.
-            </p>
-          </div>
-
-          <div className="textContainer">
             <h2>How do we protect your data?</h2>
             <p>
               We take the protection of your personal data seriously. We use SSL
@@ -148,11 +141,12 @@ const privacy = () => {
               data protection rights, please do not hesitate to contact us.
             </p>
             <br />
-            <p>Email: TODOOOOOO</p>
+            <p>Email: {noGithub.email}</p>
+            <br />
             <p>Address: </p>
-            <p>Juliane Blothner</p>
-            <p>Pettenkofer Str. 2</p>
-            <p>50823 Köln</p>
+            <p>{noGithub.name}</p>
+            <p>{noGithub.street}</p>
+            <p>{noGithub.city}</p>
             <p>Germany</p>
           </div>
         </section>

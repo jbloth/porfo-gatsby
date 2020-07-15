@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
+import noGithub from "../../noGithub";
 
 const legal = () => {
   return (
@@ -20,14 +21,14 @@ const legal = () => {
             </h2>
 
             <h3>Address: </h3>
-            <p>Juliane Blothner</p>
-            <p>Pettenkofer Str. 2</p>
-            <p>50823 Köln</p>
+            <p>{noGithub.name}</p>
+            <p>{noGithub.street}</p>
+            <p>{noGithub.city}</p>
             <p>Germany</p>
 
             <h3>Contact:</h3>
-            <p>Email: info@serious-salmon.com</p>
-            <p>Phone: +49 17696041817</p>
+            <p>Email: {noGithub.email}</p>
+            <p>Phone: {noGithub.phone}</p>
           </div>
 
           <div className="textContainer">

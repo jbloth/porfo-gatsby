@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `JB Makes`,
-    description: `Web developer from Cologne`,
+    description: `Web developer from Cologne, Germany`,
     url: "",
     image: "",
   },
