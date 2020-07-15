@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import styles from "./ContactForm.module.css";
 import Button from "./Button";
+import MessageSentModal from "./MessageSentModal";
 
 /* Contact from component using netlify froms and formik inspired by:
   https://www.derekaspaulding.com/blog/simple-contact-form-with-gatsby-formik-and-netlify/
 */
 const ContactForm = () => {
+  const messageModalRef = useRef();
+  const closeModalBtnRef = useRef();
+  const [errorFlags, setErrorFlags] = useState({});
+  const [successMsgOpen, setSuccessMsgOpen] = useState(false);
+  const toggleSuccessMsgOpen = () => setSuccessMsgOpen(!successMsgOpen);
+
   // Make form inputs compatible with netlify forms
   const encode = data => {
     return Object.keys(data)
@@ -32,7 +39,9 @@ const ContactForm = () => {
             body: encode({ "form-name": "contact-from", ...values }),
           })
             .then(() => {
-              alert("Success");
+              setSuccessMsgOpen(true);
+              // Set focus to "OK" button on success-modal
+              closeModalBtnRef.current.focus();
               actions.resetForm();
             })
             .catch(() => {
@@ -45,14 +54,18 @@ const ContactForm = () => {
           const errors = {};
           if (!values.name) {
             errors.name = "Name Required";
+            setErrorFlags({ ...errorFlags, name: true });
           }
           if (!values.email || !emailRegex.test(values.email)) {
             errors.email = "Valid Email Required";
+            setErrorFlags({ ...errorFlags, email: true });
           }
           if (!values.message) {
             errors.message = "Message Required";
+            setErrorFlags({ ...errorFlags, message: true });
           }
-          return errors;
+          const formErrors = errors;
+          return formErrors;
         }}
       >
         {() => (
@@ -66,10 +79,13 @@ const ContactForm = () => {
                 <Field
                   name="name"
                   aria-label="Name"
+                  aria-required="true"
+                  aria-invalid={!!errorFlags.name}
+                  aria-describedby={errorFlags.name ? "nameError" : null}
                   placeholder="Name"
                   className={styles.formInput}
                 />
-                <p className={styles.errorMsg}>
+                <p className={styles.errorMsg} id="nameError" role="alert">
                   <ErrorMessage name="name" />
                 </p>
               </div>
@@ -78,10 +94,13 @@ const ContactForm = () => {
                 <Field
                   name="email"
                   aria-label="Email"
+                  aria-required="true"
+                  aria-invalid={!!errorFlags.email}
+                  aria-describedby={errorFlags.email ? "emailError" : null}
                   placeholder="Email"
                   className={styles.formInput}
                 />
-                <p className={styles.errorMsg}>
+                <p className={styles.errorMsg} id="emailError" role="alert">
                   <ErrorMessage name="email" />
                 </p>
               </div>
@@ -93,8 +112,8 @@ const ContactForm = () => {
                   placeholder="showStopper"
                   className={styles.formInput}
                 />
-                <p className={styles.errorMsg}>
-                  <ErrorMessage name="name" />
+                <p className={styles.errorMsg} role="alert">
+                  <ErrorMessage name="showStopper" />
                 </p>
               </div>
 
@@ -102,12 +121,15 @@ const ContactForm = () => {
                 <Field
                   name="message"
                   aria-label="Message"
+                  aria-required="true"
+                  aria-invalid={!!errorFlags.message}
+                  aria-describedby={errorFlags.message ? "messageError" : null}
                   placeholder="Message"
                   className={styles.formInput}
                   component="textarea"
                   rows="10"
                 />
-                <p className={styles.errorMsg}>
+                <p className={styles.errorMsg} id="messageError" role="alert">
                   <ErrorMessage name="message" />
                 </p>
               </div>
@@ -117,7 +139,7 @@ const ContactForm = () => {
 
             <div className={styles.buttonRow}>
               <div className={styles.buttonWrap}>
-                <Button type="submit" big>
+                <Button type="submit" aria-haspopup="dialog" big>
                   SEND
                 </Button>
               </div>
@@ -125,40 +147,13 @@ const ContactForm = () => {
           </Form>
         )}
       </Formik>
-      {/* <form method="post" action="#">
-        <div className={styles.formGroup}>
-          <input
-            type="text"
-            aria-label="Name"
-            name="Name"
-            placeholder="Name"
-            className={styles.formInput}
-          />
-
-          <input
-            type="email"
-            aria-label="Email"
-            name="Email"
-            placeholder="Email"
-            className={styles.formInput}
-          />
-
-          <textarea
-            aria-label="Message"
-            name="message"
-            placeholder="Message"
-            rows="10"
-            className={styles.formInput}
-          ></textarea>
-        </div>
-        <div className={styles.buttonRow}>
-          <div className={styles.buttonWrap}>
-            <Button type="submit" big>
-              SEND
-            </Button>
-          </div>
-        </div>
-      </form> */}
+      {successMsgOpen && (
+        <MessageSentModal
+          focusRef={closeModalBtnRef}
+          modalRef={messageModalRef}
+          onCloseClick={toggleSuccessMsgOpen}
+        />
+      )}
     </div>
   );
 };

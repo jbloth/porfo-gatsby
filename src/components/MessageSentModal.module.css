@@ -1,0 +1,74 @@
+@value tiniest, tiny, smallest, small from "../styles/breakpoints.css";
+@value fontAnimations from "../../static/fonts/fonts.css";
+@value colors: "../styles/colors.css";
+@value bgLight, highlight, textblue from colors;
+
+.background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 106;
+}
+
+.container {
+  background-color: bgLight;
+  border: 2px solid textblue;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+  width: 40rem;
+  height: 30rem;
+  padding: 4rem;
+  z-index: 110;
+}
+
+.container:focus {
+  border: 2px solid highlight;
+}
+
+.contentContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainer {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  fill: textblue;
+}
+
+.msg {
+  padding: 4rem 0;
+}
+
+.buttonArea {
+  min-width: 8rem;
+}
+
+@media tiny {
+  .container {
+    top: 25%;
+    width: 30rem;
+    height: 25rem;
+    padding: 3rem;
+  }
+
+  .iconContainer {
+    width: 3rem;
+    height: 3rem;
+    top: 2rem;
+    right: 2rem;
+  }
+}

@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 
 import styles from "./privacy.module.css";
 import Layout from "../components/Layout";
+import noGithub from "../../noGithub";
 
 const privacy = () => {
   return (
@@ -92,14 +93,6 @@ const privacy = () => {
           </div>
 
           <div className="textContainer">
-            <h2>Where do we store your data?</h2>
-            <p>
-              Our server is located in
-              TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO.
-            </p>
-          </div>
-
-          <div className="textContainer">
             <h2>How do we protect your data?</h2>
             <p>
               We take the protection of your personal data seriously. We use SSL
@@ -148,7 +141,8 @@ const privacy = () => {
               data protection rights, please do not hesitate to contact us.
             </p>
             <br />
-            <p>Email: TODOOOOOO</p>
+            <p>Email: {noGithub.email}</p>
+            <br />
             <p>Address: </p>
             <p>{noGithub.name}</p>
             <p>{noGithub.street}</p>
