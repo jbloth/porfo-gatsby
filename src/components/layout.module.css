@@ -1,7 +1,7 @@
 @value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value fontAnimations, fontText from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
-@value bgLight, textblue, highlight from colors;
+@value bgLight, textblue, highlight, link from colors;
 
 /* ---- reset and base styles ---- */
 *,
@@ -49,6 +49,10 @@ h4 {
 
 a {
   text-decoration: none;
+  color: link;
+}
+
+nav a {
   color: textblue;
 }
 

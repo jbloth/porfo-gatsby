@@ -1,5 +1,5 @@
 @value colors: "../styles/colors.css";
-@value bgDark, bgLight, textblue, highlight, linkFocus from colors;
+@value bgDark, bgLight, textblue, highlight, link from colors;
 @value fontText from "../../static/fonts/fonts.css";
 
 .fieldGroup {
@@ -55,6 +55,6 @@
 }
 
 .errorMsg {
-  color: linkFocus;
+  color: link;
   font-size: 1.2rem;
 }

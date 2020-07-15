@@ -104,7 +104,7 @@ export default function Home() {
             integration, I wanted to use Wordpress as a Content Manangement
             System, but also leverage the exceptional user experience that React
             provides. The next.js framework was chosen to build the site as it
-            comes with many optimizations, does only require minmal
+            comes with many optimizations, does only require minimal
             configuration and allows me to choose between server site rendered
             and statically generated pages.
           </p>
@@ -112,7 +112,7 @@ export default function Home() {
           <p>
             I used the{" "}
             <a href="https://www.wpgraphql.com/">WP GraphQL Plugin</a> with its
-            WooCommerce extention on the Wordpress side and{" "}
+            WooCommerce extension on the Wordpress side and{" "}
             <a href="https://www.apollographql.com/client/">Apollo Client</a> on
             the client side for delivering the product information to the
             frontend.

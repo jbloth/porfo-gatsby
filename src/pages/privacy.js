@@ -28,7 +28,7 @@ const privacy = () => {
             <p>{noGithub.city}</p>
             <p>Germany</p>
             <br />
-            <p>Our website address is: TODO</p>
+            <p>Our website address is: https://jbmakesthings.netlify.app</p>
           </div>
 
           <div className="textContainer">
@@ -53,12 +53,10 @@ const privacy = () => {
           <div className="textContainer">
             <h2>What personal data do we collect and how do we collect it?</h2>
             <p>
-              You directly provide Our Company with most of the data we collect.
-              We collect data and process data when you:
+              You directly provide our company with most of the data we collect.
+              We collect data and process data when you fill out and submit a
+              contact form.
             </p>
-            <ul className="privacy-ul">
-              <li>Fill out and submit a contact from</li>
-            </ul>
 
             <h4>Contact Form</h4>
             <p>
@@ -85,10 +83,10 @@ const privacy = () => {
             <h2>How long do we store your data?</h2>
 
             <p>
-              Data submitted through the contact form will emailed directly to
-              us and not stored in the database. Emails generated through this
-              process will be stored as long as it is necessary to process your
-              request and deleted afterwards.
+              Data submitted through the contact form will be emailed directly
+              to us and not stored in the database. Emails generated through
+              this process will be stored as long as it is necessary to process
+              your request and deleted afterwards.
             </p>
           </div>
 
@@ -102,7 +100,7 @@ const privacy = () => {
 
           <div className="textContainer">
             <h2>How we may share your data</h2>
-            <p>We do not share information with third parties.</p>
+            <p>We do not share your information with third parties.</p>
           </div>
 
           <div className="textContainer">
@@ -115,13 +113,13 @@ const privacy = () => {
               any data we are obliged to keep for administrative, legal, or
               security purposes.
             </p>
-
+            <br />
             <p>
               If you make a request, we have one month to respond to you. If you
               would like to exercise any of these rights, please contact us at
               our email:
             </p>
-            <p>TODOTODOTODOTODO</p>
+            <p>{noGithub.email}</p>
           </div>
 
           <div className="textContainer">
@@ -136,9 +134,9 @@ const privacy = () => {
           <div className="textContainer">
             <h2>How to contact us</h2>
             <p>
-              If you have any questions about Our Company’s privacy policy, the
-              data we hold on you, or you would like to exercise one of your
-              data protection rights, please do not hesitate to contact us.
+              If you have any questions about our privacy policy, the data we
+              hold on you, or you would like to exercise one of your data
+              protection rights, please do not hesitate to contact us.
             </p>
             <br />
             <p>Email: {noGithub.email}</p>
