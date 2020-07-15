@@ -1,5 +1,9 @@
 @value colors: "../styles/colors.css";
+<<<<<<< HEAD
 @value bgDark, bgLight, textblue, highlight, link from colors;
+=======
+@value bgDark, bgLight, textblue, highlight, linkFocus from colors;
+>>>>>>> 57cffaec2043f390ba486d4a7317b4619acb8781
 @value fontText from "../../static/fonts/fonts.css";
 
 .fieldGroup {
@@ -55,6 +59,10 @@
 }
 
 .errorMsg {
+<<<<<<< HEAD
   color: link;
+=======
+  color: linkFocus;
+>>>>>>> 57cffaec2043f390ba486d4a7317b4619acb8781
   font-size: 1.2rem;
 }

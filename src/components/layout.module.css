@@ -1,7 +1,11 @@
 @value tiniest, tiny, smallest, small, medium, large from "../styles/breakpoints.css";
 @value fontAnimations, fontText from "../../static/fonts/fonts.css";
 @value colors: "../styles/colors.css";
+<<<<<<< HEAD
 @value bgLight, textblue, highlight, link from colors;
+=======
+@value bgLight, textblue, highlight from colors;
+>>>>>>> 57cffaec2043f390ba486d4a7317b4619acb8781
 
 /* ---- reset and base styles ---- */
 *,
@@ -49,10 +53,13 @@ h4 {
 
 a {
   text-decoration: none;
+<<<<<<< HEAD
   color: link;
 }
 
 nav a {
+=======
+>>>>>>> 57cffaec2043f390ba486d4a7317b4619acb8781
   color: textblue;
 }
 

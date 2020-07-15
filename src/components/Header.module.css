@@ -60,3 +60,34 @@
     padding-top: 1.4rem;
   }
 }
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  fill: textblue;
+  display: none;
+}
+
+@media small {
+  .iconContainer {
+    width: 3rem;
+    height: 3rem;
+    fill: textblue;
+    display: block;
+  }
+
+  .headerMenu {
+    display: none;
+  }
+}
+
+@media tiny {
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    width: 4rem;
+    padding-top: 1.4rem;
+  }
+}
